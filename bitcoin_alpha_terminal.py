@@ -23,55 +23,55 @@ st.sidebar.caption("🇺🇸 Any amount keeps this growing from the United State
 
 # ==================== FULL CLEAN DATA ====================
 data = [
-    {"Company": "Strategy", "Ticker": "MSTR", "Country": "US", "BTC": 738731, "Value (B)": 50.66, "mNAV": 0.97, "Strategy": "Preferred + ATM"},
-    {"Company": "MARA Holdings, Inc.", "Ticker": "MARA", "Country": "US", "BTC": 53822, "Value (B)": 3.69, "mNAV": 1.04, "Strategy": "Miner treasury"},
-    {"Company": "Twenty One Capital", "Ticker": "XXI", "Country": "US", "BTC": 43514, "Value (B)": 2.98, "mNAV": 0.71, "Strategy": "Pure treasury"},
-    {"Company": "Metaplanet Inc.", "Ticker": "MPJPY", "Country": "JP", "BTC": 35102, "Value (B)": 2.41, "mNAV": 1.26, "Strategy": "Pure treasury"},
-    {"Company": "Bitcoin Standard Treasury Company", "Ticker": "CEPO", "Country": "US", "BTC": 30021, "Value (B)": 2.06, "mNAV": 0.13, "Strategy": "Pure treasury"},
-    {"Company": "Bullish", "Ticker": "BLSH", "Country": "US", "BTC": 24300, "Value (B)": 1.67, "mNAV": 2.68, "Strategy": "Pure treasury"},
-    {"Company": "Riot Platforms, Inc.", "Ticker": "RIOT", "Country": "US", "BTC": 18005, "Value (B)": 1.24, "mNAV": 4.84, "Strategy": "Miner treasury"},
-    {"Company": "Coinbase Global, Inc.", "Ticker": "COIN", "Country": "US", "BTC": 15389, "Value (B)": 1.06, "mNAV": 52.11, "Strategy": "Pure treasury"},
-    {"Company": "Hut 8 Mining Corp", "Ticker": "HUT", "Country": "US", "BTC": 13696, "Value (B)": 0.94, "mNAV": 5.91, "Strategy": "Miner treasury"},
-    {"Company": "CleanSpark, Inc.", "Ticker": "CLSK", "Country": "US", "BTC": 13363, "Value (B)": 0.92, "mNAV": 3.26, "Strategy": "Miner treasury"},
-    {"Company": "Strive", "Ticker": "ASST", "Country": "US", "BTC": 13132, "Value (B)": 0.90, "mNAV": 0.61, "Strategy": "Pure treasury"},
-    {"Company": "Tesla, Inc.", "Ticker": "TSLA", "Country": "US", "BTC": 11509, "Value (B)": 0.79, "mNAV": 0.00, "Strategy": "Pure treasury"},
-    {"Company": "Trump Media & Technology Group Corp.", "Ticker": "DJT", "Country": "US", "BTC": 9542, "Value (B)": 0.65, "mNAV": 3.70, "Strategy": "Pure treasury"},
-    {"Company": "Block, Inc.", "Ticker": "XYZ", "Country": "US", "BTC": 8883, "Value (B)": 0.61, "mNAV": 65.84, "Strategy": "Pure treasury"},
-    {"Company": "GD Culture Group", "Ticker": "GDC", "Country": "US", "BTC": 7500, "Value (B)": 0.51, "mNAV": 0.47, "Strategy": "Pure treasury"},
-    {"Company": "Galaxy Digital Holdings Ltd", "Ticker": "GLXY", "Country": "US", "BTC": 6894, "Value (B)": 0.47, "mNAV": 16.90, "Strategy": "Pure treasury"},
-    {"Company": "American Bitcoin Corp", "Ticker": "ABTC", "Country": "US", "BTC": 6500, "Value (B)": 0.45, "mNAV": 2.26, "Strategy": "Pure treasury"},
-    {"Company": "Next Technology Holding Inc.", "Ticker": "NXTT", "Country": "CN", "BTC": 5833, "Value (B)": 0.40, "mNAV": 0.02, "Strategy": "Pure treasury"},
-    {"Company": "ProCap Financial", "Ticker": "BRR", "Country": "US", "BTC": 5457, "Value (B)": 0.37, "mNAV": 0.00, "Strategy": "Pure treasury"},
-    {"Company": "Nakamoto Inc", "Ticker": "NAKA", "Country": "US", "BTC": 5398, "Value (B)": 0.37, "mNAV": 0.36, "Strategy": "Pure treasury"},
-    {"Company": "GameStop Corp.", "Ticker": "GME", "Country": "US", "BTC": 4710, "Value (B)": 0.32, "mNAV": 40.77, "Strategy": "Pure treasury"},
-    {"Company": "Boyaa Interactive International Limited", "Ticker": "0434", "Country": "HK", "BTC": 4091, "Value (B)": 0.28, "mNAV": 0.96, "Strategy": "Pure treasury"},
-    {"Company": "Empery Digital", "Ticker": "EMPD", "Country": "US", "BTC": 4081, "Value (B)": 0.28, "mNAV": 0.62, "Strategy": "Pure treasury"},
-    {"Company": "Gemini Space Station Inc", "Ticker": "GEMI", "Country": "US", "BTC": 4002, "Value (B)": 0.27, "mNAV": 3.79, "Strategy": "Pure treasury"},
-    {"Company": "OranjeBTC", "Ticker": "OBTC3", "Country": "BR", "BTC": 3723, "Value (B)": 0.26, "mNAV": 0.86, "Strategy": "Pure treasury"},
-    {"Company": "Bitcoin Group SE", "Ticker": "ADE", "Country": "DE", "BTC": 3605, "Value (B)": 0.25, "mNAV": 0.72, "Strategy": "Pure treasury"},
-    {"Company": "Cango Inc", "Ticker": "CANG", "Country": "US", "BTC": 3313, "Value (B)": 0.23, "mNAV": 0.51, "Strategy": "Pure treasury"},
-    {"Company": "Capital B", "Ticker": "ALCPB", "Country": "FR", "BTC": 2836, "Value (B)": 0.19, "mNAV": 1.89, "Strategy": "Pure treasury"},
-    {"Company": "The Smarter Web Company PLC", "Ticker": "SWC", "Country": "GB", "BTC": 2692, "Value (B)": 0.19, "mNAV": 0.85, "Strategy": "Pure treasury"},
-    {"Company": "Core Scientific", "Ticker": "CORZ", "Country": "US", "BTC": 2537, "Value (B)": 0.17, "mNAV": 26.81, "Strategy": "Miner treasury"},
-    {"Company": "DeFi Technologies", "Ticker": "DEFI", "Country": "CA", "BTC": 2452, "Value (B)": 0.17, "mNAV": 1.55, "Strategy": "Pure treasury"},
-    {"Company": "Microcloud Hologram", "Ticker": "HOLO", "Country": "KY", "BTC": 2353, "Value (B)": 0.16, "mNAV": 0.19, "Strategy": "Pure treasury"},
-    {"Company": "HIVE Digital Technologies", "Ticker": "HIVE", "Country": "CA", "BTC": 2201, "Value (B)": 0.15, "mNAV": 3.08, "Strategy": "Miner treasury"},
-    {"Company": "DDC Enterprise Limited", "Ticker": "DDC", "Country": "US", "BTC": 2183, "Value (B)": 0.15, "mNAV": 0.52, "Strategy": "Pure treasury"},
-    {"Company": "Sequans Communications S.A.", "Ticker": "SQNS", "Country": "FR", "BTC": 2139, "Value (B)": 0.15, "mNAV": 0.54, "Strategy": "Pure treasury"},
-    {"Company": "BitFuFu Inc.", "Ticker": "FUFU", "Country": "SG", "BTC": 1830, "Value (B)": 0.13, "mNAV": 3.53, "Strategy": "Miner treasury"},
-    {"Company": "Bitfarms Ltd.", "Ticker": "BITF", "Country": "CA", "BTC": 1827, "Value (B)": 0.13, "mNAV": 8.98, "Strategy": "Miner treasury"},
-    {"Company": "Canaan Inc.", "Ticker": "CAN", "Country": "SG", "BTC": 1778, "Value (B)": 0.12, "mNAV": 21.94, "Strategy": "Miner treasury"},
-    {"Company": "NEXON Co., Ltd.", "Ticker": "3659", "Country": "JP", "BTC": 1717, "Value (B)": 0.12, "mNAV": 0.00, "Strategy": "Pure treasury"},
-    {"Company": "Exodus Movement, Inc", "Ticker": "EXOD", "Country": "US", "BTC": 1694, "Value (B)": 0.12, "mNAV": 3.16, "Strategy": "Pure treasury"},
-    {"Company": "Cipher Mining", "Ticker": "CIFR", "Country": "US", "BTC": 1500, "Value (B)": 0.10, "mNAV": 49.33, "Strategy": "Miner treasury"},
-    {"Company": "Anap Holdings Inc.", "Ticker": "3189", "Country": "JP", "BTC": 1417, "Value (B)": 0.10, "mNAV": 0.62, "Strategy": "Pure treasury"},
-    {"Company": "Remixpoint", "Ticker": "3825", "Country": "JP", "BTC": 1411, "Value (B)": 0.10, "mNAV": 2.05, "Strategy": "Pure treasury"},
-    {"Company": "Treasury", "Ticker": "TRSR", "Country": "NL", "BTC": 1111, "Value (B)": 0.08, "mNAV": 0.00, "Strategy": "Pure treasury"},
-    {"Company": "H100 Group", "Ticker": "H100", "Country": "SE", "BTC": 1051, "Value (B)": 0.07, "mNAV": 0.00, "Strategy": "Pure treasury"},
-    {"Company": "ZOOZ Power", "Ticker": "ZOOZ", "Country": "IL", "BTC": 1036, "Value (B)": 0.07, "mNAV": 0.06, "Strategy": "Pure treasury"},
-    {"Company": "KULR Technology Group", "Ticker": "KULR", "Country": "US", "BTC": 1021, "Value (B)": 0.07, "mNAV": 1.49, "Strategy": "Pure treasury"},
-    {"Company": "Fold Holdings Inc.", "Ticker": "FLD", "Country": "US", "BTC": 1005, "Value (B)": 0.07, "mNAV": 0.92, "Strategy": "Pure treasury"},
-    {"Company": "Nano Labs", "Ticker": "NA", "Country": "CN", "BTC": 1000, "Value (B)": 0.07, "mNAV": 0.00, "Strategy": "Pure treasury"}
+    {"Company": "Strategy", "Ticker": "MSTR", "BTC": 738731, "Value (B)": 50.66, "mNAV": 0.97, "Strategy": "Preferred + ATM"},
+    {"Company": "MARA Holdings, Inc.", "Ticker": "MARA", "BTC": 53822, "Value (B)": 3.69, "mNAV": 1.04, "Strategy": "Miner treasury"},
+    {"Company": "Twenty One Capital", "Ticker": "XXI", "BTC": 43514, "Value (B)": 2.98, "mNAV": 0.71, "Strategy": "Pure treasury"},
+    {"Company": "Metaplanet Inc.", "Ticker": "MPJPY", "BTC": 35102, "Value (B)": 2.41, "mNAV": 1.26, "Strategy": "Pure treasury"},
+    {"Company": "Bitcoin Standard Treasury Company", "Ticker": "CEPO", "BTC": 30021, "Value (B)": 2.06, "mNAV": 0.13, "Strategy": "Pure treasury"},
+    {"Company": "Bullish", "Ticker": "BLSH", "BTC": 24300, "Value (B)": 1.67, "mNAV": 2.68, "Strategy": "Pure treasury"},
+    {"Company": "Riot Platforms, Inc.", "Ticker": "RIOT", "BTC": 18005, "Value (B)": 1.24, "mNAV": 4.84, "Strategy": "Miner treasury"},
+    {"Company": "Coinbase Global, Inc.", "Ticker": "COIN", "BTC": 15389, "Value (B)": 1.06, "mNAV": 52.11, "Strategy": "Pure treasury"},
+    {"Company": "Hut 8 Mining Corp", "Ticker": "HUT", "BTC": 13696, "Value (B)": 0.94, "mNAV": 5.91, "Strategy": "Miner treasury"},
+    {"Company": "CleanSpark, Inc.", "Ticker": "CLSK", "BTC": 13363, "Value (B)": 0.92, "mNAV": 3.26, "Strategy": "Miner treasury"},
+    {"Company": "Strive", "Ticker": "ASST", "BTC": 13132, "Value (B)": 0.90, "mNAV": 0.61, "Strategy": "Pure treasury"},
+    {"Company": "Tesla, Inc.", "Ticker": "TSLA", "BTC": 11509, "Value (B)": 0.79, "mNAV": 0.00, "Strategy": "Pure treasury"},
+    {"Company": "Trump Media & Technology Group Corp.", "Ticker": "DJT", "BTC": 9542, "Value (B)": 0.65, "mNAV": 3.70, "Strategy": "Pure treasury"},
+    {"Company": "Block, Inc.", "Ticker": "XYZ", "BTC": 8883, "Value (B)": 0.61, "mNAV": 65.84, "Strategy": "Pure treasury"},
+    {"Company": "GD Culture Group", "Ticker": "GDC", "BTC": 7500, "Value (B)": 0.51, "mNAV": 0.47, "Strategy": "Pure treasury"},
+    {"Company": "Galaxy Digital Holdings Ltd", "Ticker": "GLXY", "BTC": 6894, "Value (B)": 0.47, "mNAV": 16.90, "Strategy": "Pure treasury"},
+    {"Company": "American Bitcoin Corp", "Ticker": "ABTC", "BTC": 6500, "Value (B)": 0.45, "mNAV": 2.26, "Strategy": "Pure treasury"},
+    {"Company": "Next Technology Holding Inc.", "Ticker": "NXTT", "BTC": 5833, "Value (B)": 0.40, "mNAV": 0.02, "Strategy": "Pure treasury"},
+    {"Company": "ProCap Financial", "Ticker": "BRR", "BTC": 5457, "Value (B)": 0.37, "mNAV": 0.00, "Strategy": "Pure treasury"},
+    {"Company": "Nakamoto Inc", "Ticker": "NAKA", "BTC": 5398, "Value (B)": 0.37, "mNAV": 0.36, "Strategy": "Pure treasury"},
+    {"Company": "GameStop Corp.", "Ticker": "GME", "BTC": 4710, "Value (B)": 0.32, "mNAV": 40.77, "Strategy": "Pure treasury"},
+    {"Company": "Boyaa Interactive International Limited", "Ticker": "0434", "BTC": 4091, "Value (B)": 0.28, "mNAV": 0.96, "Strategy": "Pure treasury"},
+    {"Company": "Empery Digital", "Ticker": "EMPD", "BTC": 4081, "Value (B)": 0.28, "mNAV": 0.62, "Strategy": "Pure treasury"},
+    {"Company": "Gemini Space Station Inc", "Ticker": "GEMI", "BTC": 4002, "Value (B)": 0.27, "mNAV": 3.79, "Strategy": "Pure treasury"},
+    {"Company": "OranjeBTC", "Ticker": "OBTC3", "BTC": 3723, "Value (B)": 0.26, "mNAV": 0.86, "Strategy": "Pure treasury"},
+    {"Company": "Bitcoin Group SE", "Ticker": "ADE", "BTC": 3605, "Value (B)": 0.25, "mNAV": 0.72, "Strategy": "Pure treasury"},
+    {"Company": "Cango Inc", "Ticker": "CANG", "BTC": 3313, "Value (B)": 0.23, "mNAV": 0.51, "Strategy": "Pure treasury"},
+    {"Company": "Capital B", "Ticker": "ALCPB", "BTC": 2836, "Value (B)": 0.19, "mNAV": 1.89, "Strategy": "Pure treasury"},
+    {"Company": "The Smarter Web Company PLC", "Ticker": "SWC", "BTC": 2692, "Value (B)": 0.19, "mNAV": 0.85, "Strategy": "Pure treasury"},
+    {"Company": "Core Scientific", "Ticker": "CORZ", "BTC": 2537, "Value (B)": 0.17, "mNAV": 26.81, "Strategy": "Miner treasury"},
+    {"Company": "DeFi Technologies", "Ticker": "DEFI", "BTC": 2452, "Value (B)": 0.17, "mNAV": 1.55, "Strategy": "Pure treasury"},
+    {"Company": "Microcloud Hologram", "Ticker": "HOLO", "BTC": 2353, "Value (B)": 0.16, "mNAV": 0.19, "Strategy": "Pure treasury"},
+    {"Company": "HIVE Digital Technologies", "Ticker": "HIVE", "BTC": 2201, "Value (B)": 0.15, "mNAV": 3.08, "Strategy": "Miner treasury"},
+    {"Company": "DDC Enterprise Limited", "Ticker": "DDC", "BTC": 2183, "Value (B)": 0.15, "mNAV": 0.52, "Strategy": "Pure treasury"},
+    {"Company": "Sequans Communications S.A.", "Ticker": "SQNS", "BTC": 2139, "Value (B)": 0.15, "mNAV": 0.54, "Strategy": "Pure treasury"},
+    {"Company": "BitFuFu Inc.", "Ticker": "FUFU", "BTC": 1830, "Value (B)": 0.13, "mNAV": 3.53, "Strategy": "Miner treasury"},
+    {"Company": "Bitfarms Ltd.", "Ticker": "BITF", "BTC": 1827, "Value (B)": 0.13, "mNAV": 8.98, "Strategy": "Miner treasury"},
+    {"Company": "Canaan Inc.", "Ticker": "CAN", "BTC": 1778, "Value (B)": 0.12, "mNAV": 21.94, "Strategy": "Miner treasury"},
+    {"Company": "NEXON Co., Ltd.", "Ticker": "3659", "BTC": 1717, "Value (B)": 0.12, "mNAV": 0.00, "Strategy": "Pure treasury"},
+    {"Company": "Exodus Movement, Inc", "Ticker": "EXOD", "BTC": 1694, "Value (B)": 0.12, "mNAV": 3.16, "Strategy": "Pure treasury"},
+    {"Company": "Cipher Mining", "Ticker": "CIFR", "BTC": 1500, "Value (B)": 0.10, "mNAV": 49.33, "Strategy": "Miner treasury"},
+    {"Company": "Anap Holdings Inc.", "Ticker": "3189", "BTC": 1417, "Value (B)": 0.10, "mNAV": 0.62, "Strategy": "Pure treasury"},
+    {"Company": "Remixpoint", "Ticker": "3825", "BTC": 1411, "Value (B)": 0.10, "mNAV": 2.05, "Strategy": "Pure treasury"},
+    {"Company": "Treasury", "Ticker": "TRSR", "BTC": 1111, "Value (B)": 0.08, "mNAV": 0.00, "Strategy": "Pure treasury"},
+    {"Company": "H100 Group", "Ticker": "H100", "BTC": 1051, "Value (B)": 0.07, "mNAV": 0.00, "Strategy": "Pure treasury"},
+    {"Company": "ZOOZ Power", "Ticker": "ZOOZ", "BTC": 1036, "Value (B)": 0.07, "mNAV": 0.06, "Strategy": "Pure treasury"},
+    {"Company": "KULR Technology Group", "Ticker": "KULR", "BTC": 1021, "Value (B)": 0.07, "mNAV": 1.49, "Strategy": "Pure treasury"},
+    {"Company": "Fold Holdings Inc.", "Ticker": "FLD", "BTC": 1005, "Value (B)": 0.07, "mNAV": 0.92, "Strategy": "Pure treasury"},
+    {"Company": "Nano Labs", "Ticker": "NA", "BTC": 1000, "Value (B)": 0.07, "mNAV": 0.00, "Strategy": "Pure treasury"}
 ]
 
 df = pd.DataFrame(data)
@@ -80,23 +80,28 @@ df['BTC'] = pd.to_numeric(df['BTC'], errors='coerce').fillna(0)
 @st.cache_data(ttl=15)
 def get_live_prices(tickers):
     prices = {}
+    changes = {}
     for t in tickers:
         try:
             ticker = yf.Ticker(t)
             price = ticker.info.get('currentPrice') or ticker.history(period="1d")['Close'].iloc[-1]
+            change = ticker.info.get('regularMarketChangePercent') or 0
             prices[t] = round(price, 2) if price else None
+            changes[t] = round(change, 2)
         except:
             prices[t] = None
-    return prices
+            changes[t] = 0
+    return prices, changes
 
 all_tickers = df['Ticker'].tolist() + ['BTC-USD']
-prices = get_live_prices(all_tickers)
+prices, changes = get_live_prices(all_tickers)
 btc_price = prices.get('BTC-USD') or 68000
 
 df['Stock Price ($)'] = df['Ticker'].map(prices)
+df['Daily Change %'] = df['Ticker'].map(changes)
 df['BTC Value (B)'] = (df['BTC'] * btc_price / 1_000_000_000).fillna(0).round(2)
 
-# ==================== REFRESH BUTTON (clears cache) ====================
+# ==================== REFRESH BUTTON ====================
 if st.button("🔄 Refresh Live Prices Now"):
     get_live_prices.clear()
     st.rerun()
@@ -104,7 +109,6 @@ if st.button("🔄 Refresh Live Prices Now"):
 last_updated = datetime.now().strftime("%I:%M:%S %p")
 st.caption(f"Last updated: {last_updated} • Prices update every 15 seconds or click button")
 
-# ==================== LANDING PAGE ====================
 st.metric("🚀 Current Bitcoin Price", f"${btc_price:,}")
 
 st.divider()
@@ -114,11 +118,19 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(["📊 Holdings Table", "📈 Charts", "�
 
 with tab1:
     st.subheader("Corporate Bitcoin Holdings")
-    country_filter = st.selectbox("Filter by Country", ["All"] + sorted(df["Country"].unique()))
-    filtered = df if country_filter == "All" else df[df["Country"] == country_filter]
+    filtered = df  # No country filter anymore
+    # Reorder columns exactly as requested
+    display_cols = ['Company', 'Ticker', 'Stock Price ($)', 'Daily Change %', 'BTC', 'BTC Value (B)', 'mNAV', 'Strategy']
     st.dataframe(
-        filtered.sort_values("BTC", ascending=False)[['Company', 'Ticker', 'Country', 'BTC', 'Stock Price ($)', 'BTC Value (B)', 'mNAV', 'Strategy']],
-        use_container_width=True, hide_index=True
+        filtered.sort_values("BTC", ascending=False)[display_cols],
+        use_container_width=True, 
+        hide_index=True,
+        column_config={
+            "Daily Change %": st.column_config.NumberColumn(
+                format="%.2f%%",
+                help="Daily % change (green = up, red = down)"
+            )
+        }
     )
 
 with tab2:
@@ -192,4 +204,4 @@ with tab5:
     st.caption("🇺🇸 Every sat helps keep this terminal growing from the United States")
 
 st.divider()
-st.caption("v5.0 • Live prices update every 15 seconds or click Refresh button • Built in the United States 🇺🇸")
+st.caption("v6.0 • Live prices update every 15 seconds or click Refresh button • Built in the United States 🇺🇸")
