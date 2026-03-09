@@ -21,7 +21,7 @@ st.sidebar.subheader("💰 Donate BTC")
 st.sidebar.code(DONATION_ADDRESS)
 st.sidebar.caption("🇺🇸 Any amount keeps this growing from the United States")
 
-# ==================== FULL CLEAN DATA (50+ companies) ====================
+# ==================== FULL CLEAN DATA ====================
 data = [
     {"Company": "Strategy", "Ticker": "MSTR", "Country": "US", "BTC": 738731, "Value (B)": 50.66, "mNAV": 0.97, "Strategy": "Preferred + ATM"},
     {"Company": "MARA Holdings, Inc.", "Ticker": "MARA", "Country": "US", "BTC": 53822, "Value (B)": 3.69, "mNAV": 1.04, "Strategy": "Miner treasury"},
@@ -75,11 +75,9 @@ data = [
 ]
 
 df = pd.DataFrame(data)
-
-# SAFE FIX: Convert BTC column to numbers
 df['BTC'] = pd.to_numeric(df['BTC'], errors='coerce').fillna(0)
 
-@st.cache_data(ttl=60)
+@st.cache_data(ttl=30)  # ← Shorter cache = more live
 def get_live_prices(tickers):
     prices = {}
     for t in tickers:
@@ -98,8 +96,12 @@ btc_price = prices.get('BTC-USD') or 68000
 df['Stock Price ($)'] = df['Ticker'].map(prices)
 df['BTC Value (B)'] = (df['BTC'] * btc_price / 1_000_000_000).fillna(0).round(2)
 
+# ==================== MANUAL REFRESH BUTTON ====================
+if st.button("🔄 Refresh Live Prices Now"):
+    st.rerun()
+
 # ==================== CLEAN LANDING PAGE ====================
-st.metric("🚀 Current Bitcoin Price", f"${btc_price:,}", "Live — updates on refresh")
+st.metric("🚀 Current Bitcoin Price", f"${btc_price:,}", "Live — updates every 30 seconds or click button")
 st.divider()
 
 # ==================== TABS ====================
@@ -113,7 +115,6 @@ with tab1:
         filtered.sort_values("BTC", ascending=False)[['Company', 'Ticker', 'Country', 'BTC', 'Stock Price ($)', 'BTC Value (B)', 'mNAV', 'Strategy']],
         use_container_width=True, hide_index=True
     )
-    st.caption("Stock prices update live • Scroll for all companies")
 
 with tab2:
     st.subheader("Full Interactive Charts")
@@ -121,7 +122,7 @@ with tab2:
     selected_ticker = st.selectbox("Choose ticker", all_chart_tickers, index=0)
     period = st.selectbox("Time period", ["1mo", "3mo", "6mo", "1y", "2y", "5y"], index=3)
     if st.button("Load Full Chart with Indicators"):
-        with st.spinner("Fetching real-time data + technical indicators..."):
+        with st.spinner("Fetching real-time data..."):
             hist = yf.download(selected_ticker, period=period, progress=False)
             hist['SMA50'] = hist['Close'].rolling(50).mean()
             hist['SMA200'] = hist['Close'].rolling(200).mean()
@@ -186,4 +187,4 @@ with tab5:
     st.caption("🇺🇸 Every sat helps keep this terminal growing from the United States")
 
 st.divider()
-st.caption("v5.0 • Clean landing page • Full live data • Built in the United States 🇺🇸")
+st.caption("v5.0 • Live prices update every 30 seconds or click Refresh button • Built in the United States 🇺🇸")
