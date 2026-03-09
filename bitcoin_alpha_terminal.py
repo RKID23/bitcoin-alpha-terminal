@@ -21,7 +21,7 @@ st.sidebar.subheader("💰 Donate BTC")
 st.sidebar.code(DONATION_ADDRESS)
 st.sidebar.caption("🇺🇸 Any amount keeps this growing from the United States")
 
-# ==================== LIVE DATA — ALL 50+ Companies ====================
+# ==================== FULL CLEAN DATA (50+ companies) ====================
 data = [
     {"Company": "Strategy", "Ticker": "MSTR", "Country": "US", "BTC": 738731, "Value (B)": 50.66, "mNAV": 0.97, "Strategy": "Preferred + ATM"},
     {"Company": "MARA Holdings, Inc.", "Ticker": "MARA", "Country": "US", "BTC": 53822, "Value (B)": 3.69, "mNAV": 1.04, "Strategy": "Miner treasury"},
@@ -76,6 +76,9 @@ data = [
 
 df = pd.DataFrame(data)
 
+# SAFE FIX: Convert BTC column to numbers
+df['BTC'] = pd.to_numeric(df['BTC'], errors='coerce').fillna(0)
+
 @st.cache_data(ttl=60)
 def get_live_prices(tickers):
     prices = {}
@@ -90,10 +93,10 @@ def get_live_prices(tickers):
 
 all_tickers = df['Ticker'].tolist() + ['BTC-USD']
 prices = get_live_prices(all_tickers)
-btc_price = prices.get('BTC-USD', 68000)
+btc_price = prices.get('BTC-USD') or 68000
 
 df['Stock Price ($)'] = df['Ticker'].map(prices)
-df['BTC Value (B)'] = (df['BTC'] * btc_price / 1_000_000_000).round(2)
+df['BTC Value (B)'] = (df['BTC'] * btc_price / 1_000_000_000).fillna(0).round(2)
 
 # ==================== CLEAN LANDING PAGE ====================
 st.metric("🚀 Current Bitcoin Price", f"${btc_price:,}", "Live — updates on refresh")
@@ -110,7 +113,7 @@ with tab1:
         filtered.sort_values("BTC", ascending=False)[['Company', 'Ticker', 'Country', 'BTC', 'Stock Price ($)', 'BTC Value (B)', 'mNAV', 'Strategy']],
         use_container_width=True, hide_index=True
     )
-    st.caption("Stock prices update live • Scroll for all 50+ companies")
+    st.caption("Stock prices update live • Scroll for all companies")
 
 with tab2:
     st.subheader("Full Interactive Charts")
@@ -145,7 +148,7 @@ with tab3:
         {"Security": "STRK", "Yield": "Variable", "Type": "Perpetual Preferred", "Status": "Active", "Note": "Bitcoin-backed credit"},
         {"Security": "STRD", "Yield": "Variable", "Type": "Perpetual Preferred", "Status": "Active", "Note": ""},
         {"Security": "STRE", "Yield": "Variable", "Type": "Perpetual Preferred", "Status": "Active", "Note": ""},
-        {"Security": "SATA (Strive)", "Yield": "12.5% variable", "Type": "Perpetual Preferred", "Status": "Active / Near par", "Note": "Second only to Strategy – funds BTC buys + debt retirement"},
+        {"Security": "SATA (Strive)", "Yield": "12.5% variable", "Type": "Perpetual Preferred", "Status": "Active / Near par", "Note": "Second only to Strategy"},
     ]
     st.dataframe(pd.DataFrame(preferred), use_container_width=True, hide_index=True)
 
@@ -183,4 +186,4 @@ with tab5:
     st.caption("🇺🇸 Every sat helps keep this terminal growing from the United States")
 
 st.divider()
-st.caption("v5.0 • Clean landing page • Live BTC price • Full data restored • Built in the United States 🇺🇸")
+st.caption("v5.0 • Clean landing page • Full live data • Built in the United States 🇺🇸")
