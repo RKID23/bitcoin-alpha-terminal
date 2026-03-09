@@ -6,10 +6,9 @@ from plotly.subplots import make_subplots
 import yfinance as yf
 from openai import OpenAI
 
-st.set_page_config(page_title="Bitcoin AI Alpha Terminal v5.0", layout="wide", page_icon="🟠")
+st.set_page_config(page_title="Bitcoin Alpha Terminal", layout="wide", page_icon="🟠")
 
-st.title("🟠 Bitcoin AI Alpha Terminal v5.0")
-st.markdown("**Bloomberg for Bitcoin Treasuries** • Strategy’s Preferred Stock “Bitcoin Bond Market” • Real-time alpha")
+st.title("🟠 BITCOIN ALPHA TERMINAL")
 st.caption("Built solo in the United States 🇺🇸 • 100% FREE forever")
 
 DONATION_ADDRESS = "bc1qfstxeju0mknz0q2vu8uldvkvxdltrhf6aqggkf"
@@ -77,7 +76,7 @@ data = [
 df = pd.DataFrame(data)
 df['BTC'] = pd.to_numeric(df['BTC'], errors='coerce').fillna(0)
 
-@st.cache_data(ttl=30)  # ← Shorter cache = more live
+@st.cache_data(ttl=30)
 def get_live_prices(tickers):
     prices = {}
     for t in tickers:
@@ -96,7 +95,7 @@ btc_price = prices.get('BTC-USD') or 68000
 df['Stock Price ($)'] = df['Ticker'].map(prices)
 df['BTC Value (B)'] = (df['BTC'] * btc_price / 1_000_000_000).fillna(0).round(2)
 
-# ==================== MANUAL REFRESH BUTTON ====================
+# ==================== MANUAL REFRESH ====================
 if st.button("🔄 Refresh Live Prices Now"):
     st.rerun()
 
@@ -181,7 +180,7 @@ Output in 4 bullets:
             st.warning("Enter xAI key in sidebar for real Grok analysis")
 
 with tab5:
-    st.subheader("💰 Support the Bitcoin AI Alpha Terminal")
+    st.subheader("💰 Support the Bitcoin Alpha Terminal")
     st.write("100% Free forever. Send any BTC directly:")
     st.code(DONATION_ADDRESS)
     st.caption("🇺🇸 Every sat helps keep this terminal growing from the United States")
