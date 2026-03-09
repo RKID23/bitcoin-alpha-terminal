@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import yfinance as yf
 from openai import OpenAI
+from datetime import datetime
 
 st.set_page_config(page_title="Bitcoin Alpha Terminal", layout="wide", page_icon="🟠")
 
@@ -76,7 +77,7 @@ data = [
 df = pd.DataFrame(data)
 df['BTC'] = pd.to_numeric(df['BTC'], errors='coerce').fillna(0)
 
-@st.cache_data(ttl=30)
+@st.cache_data(ttl=15)
 def get_live_prices(tickers):
     prices = {}
     for t in tickers:
@@ -95,12 +96,17 @@ btc_price = prices.get('BTC-USD') or 68000
 df['Stock Price ($)'] = df['Ticker'].map(prices)
 df['BTC Value (B)'] = (df['BTC'] * btc_price / 1_000_000_000).fillna(0).round(2)
 
-# ==================== MANUAL REFRESH ====================
+# ==================== REFRESH BUTTON (clears cache) ====================
 if st.button("🔄 Refresh Live Prices Now"):
+    get_live_prices.clear()
     st.rerun()
 
-# ==================== CLEAN LANDING PAGE ====================
-st.metric("🚀 Current Bitcoin Price", f"${btc_price:,}", "Live — updates every 30 seconds or click button")
+last_updated = datetime.now().strftime("%I:%M:%S %p")
+st.caption(f"Last updated: {last_updated} • Prices update every 15 seconds or click button")
+
+# ==================== LANDING PAGE ====================
+st.metric("🚀 Current Bitcoin Price", f"${btc_price:,}")
+
 st.divider()
 
 # ==================== TABS ====================
@@ -186,4 +192,4 @@ with tab5:
     st.caption("🇺🇸 Every sat helps keep this terminal growing from the United States")
 
 st.divider()
-st.caption("v5.0 • Live prices update every 30 seconds or click Refresh button • Built in the United States 🇺🇸")
+st.caption("v5.0 • Live prices update every 15 seconds or click Refresh button • Built in the United States 🇺🇸")
